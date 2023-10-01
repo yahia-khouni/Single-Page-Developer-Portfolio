@@ -1,0 +1,9 @@
+1- adding the global style :
+    * setting the custum propreties (:root)
+    * setting the boilerplate styles(html)
+    * doind a wild card selector for all elements (*, *::before, *::after )
+    *setting the global styles to the body ( font , background , line height , margin ...)
+2- u can change the color of an SVG using the fill prorety
+3- u can make SVGs accessible using : 
+   <svg role="img" aria-labelledby="socialGitHub" .................><title id="socialGitHub"> svg title </title> </svg>
+4- u can make the home link accessible 
