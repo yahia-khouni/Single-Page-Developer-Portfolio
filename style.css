@@ -1,0 +1,132 @@
+/* FILEPATH: c:\Users\MSI GAMMING I7\Desktop\Single Page Developer Portfolio\style.css */
+
+/* -----------------------------------GLOBAL----------------------------------- */
+
+/* setting the css custom properties */
+/* hsl is a beeter practice because it's easier to change the darkness or lightness of the color */
+:root {
+    --bg-body: hsl(0, 0%, 8%);
+    --bg-contact: hsl(0, 0%, 14%);
+    --accent: hsl(153, 71%, 59%);
+    --text1: hsl(0, 0%, 100%);
+    --taxt2: hsl(0, 0%, 85%);
+    --invalid: hsl(7, 100%, 68%);
+    --fs-18: 1.125rem;
+    --fs-88: 5.5rem;
+    --fs-48: 3rem;
+    --fs-24: 1.5rem;
+    --fs-72: 4.5rem;
+    --fs-40: 2.5rem;
+    --fs-32: 2rem; 
+    --container: 69.375rem;/* 1110px */
+    --transition : 300ms ease-in-out;  
+    
+}
+
+/* Adding boilerplate styles */
+html {
+    box-sizing: border-box;/* Thats so padding doesn't add to the widht or height of elements */
+    font-size: 100%;/* to take the font size from the brower-based font styles */
+}
+
+/* doing a wild card selector for all elements */
+*,
+*::before,
+*::after {
+    box-sizing: inherit;/* inherit from the parent element(html element) */
+}
+
+/* setting the global styles */
+body {
+    margin: 0;/* to remove the default margin */
+    font-family: 'Space Grotesk', sans-serif;/* adding a font family */
+    background-color: var(--bg-body);/* adding a background color */
+    color: var(--text1);/* adding a text color */
+    font-size: var(--fs-18);/* in rems (18PX / 16PX = 1.125) */
+    line-height: 1.56;/* using ratios so if we change the font size the line hight change with it  */
+    
+}
+
+.wrapper {
+    width: calc(100% -2rem);
+    max-width: var(--container);/* adding a max width */
+    margin-inline : auto;/* to center the container */
+}
+
+@media (min-width: 37.5em) {/* 600px */
+     .wrapper {
+         width: calc(100% - 3.75rem);
+     }
+}
+
+img, svg {
+    display: block;/* to remove the white space under the image */
+}
+
+/* -----------------------------------HEADER----------------------------------- */
+
+/* mobile version */
+
+.header {
+    margin-top: 20px;
+}
+ 
+.header__nav { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap : 20px 25px; 
+}
+
+.header__home{
+    font-size: 1.5rem ;
+    font-size: clamp(1.5rem, 1.02rem + 2.04vw, 2rem);
+    line-height: 1;
+    color : var(--text1);
+    text-decoration: none;
+    flex: 1 0 100%;
+}
+
+.visually-hidden {
+    position: absolute;
+    left:     -10000px;
+    top:      auto;
+    width:    1px;
+    height:   1px;
+    overflow: hidden;
+}
+
+a {
+    transition: color var(--transition);/* adding a transition to the links */
+}
+
+a:hover {
+    color: var(--accent);
+}
+
+.header__social > svg > path {
+    transition : fill var(--transition);/* adding a transition to the svg */
+}
+/* changing the color of the svg when the link is hovered */
+.header__social:hover > svg > path{
+    fill: var(--accent);
+}
+
+@media (min-width : 37.5em) {/* 600px */
+    .header {
+        scroll-margin-block-start: 30px;
+    }
+    .header__nav {
+        justify-content: flex-start;
+        align-items: center ;
+        text-align: left;
+        gap: 32px;
+    }
+
+    .header__home {
+        flex:0 1 auto;
+        margin-inline-end: auto;
+    }
+
+}

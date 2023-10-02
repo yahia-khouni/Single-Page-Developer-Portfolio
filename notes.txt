@@ -3,7 +3,32 @@
     * setting the boilerplate styles(html)
     * doind a wild card selector for all elements (*, *::before, *::after )
     *setting the global styles to the body ( font , background , line height , margin ...)
+2- to make text responsive u can use a clamp function :
+    clamp(min, ideal, max) 
+    ex : font-size: clamp(1.5rem, 3vw, 2rem);
+    u can use this website to implement it : https://royalfig.github.io/fluid-typography-calculator/
 2- u can change the color of an SVG using the fill prorety
 3- u can make SVGs accessible using : 
    <svg role="img" aria-labelledby="socialGitHub" .................><title id="socialGitHub"> svg title </title> </svg>
-4- u can make the home link accessible 
+4- u can make the home link accessible by using the visuallyhidden class 
+    <span class="visuallyhidden"> (to home page) </span> 
+    Then style it with CSS :
+    .visually-hidden {
+        position: absolute;
+        left:     -10000px;
+        top:      auto;
+        width:    1px;
+        height:   1px;
+        overflow: hidden;
+    }
+5- new flex proprety called gap that add a gap between items :
+    .header__nav {
+        gap : 20px 25px ;
+    }
+
+6- inline elements may leave some space under the element so to solve that we need to change it to block element or we can use the vertical-align proprety to change the alignment of the element
+
+   
+   
+   
+    josh commo : css , js and react developer 
